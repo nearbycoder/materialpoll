@@ -422,6 +422,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+      'compass:server',
       'autoprefixer:server',
       'connect:livereload',
       'watch'
@@ -436,6 +437,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'wiredep',
+    'compass',
     'autoprefixer',
     'connect:test',
     'karma'
@@ -445,6 +447,9 @@ module.exports = function (grunt) {
     'clean:dist',
     'wiredep',
     'useminPrepare',
+    'compass:dist',
+    'imagemin',
+    'svgmin',
     'autoprefixer',
     'concat',
     'ngAnnotate',
