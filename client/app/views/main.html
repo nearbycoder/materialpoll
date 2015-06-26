@@ -1,0 +1,26 @@
+ <div class="row">
+  <div class="col s12 m12 l12">
+    <div class="card blue darken-3">
+      <div class="card-content white-text">
+          <div class="input-field col s12 m12 l12">
+          <input id="mainquestion" ng-model="title" type="text" class="validate" style="font-size:20px">
+          <label for="mainquestion" style="font-size:20px">Type your questions or options here</label>
+        </div>
+        <div class="input-field col s12 m12 l12" ng-repeat="option in options">
+          <input id="option1" ng-model="option.name" ng-focus="addOption()" type="text" class="validate">
+          <label ng-class="{active:option.name}" for="option{{$index + 1}}">Option {{$index + 1}}</label>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <div class="card-action" style="margin-left:25px;margin-right:25px;">
+        <p>
+          <input type="checkbox" ng-model="multiple" id="test5" />
+          <label for="test5" class='red-text text-lighten-5'>Allow multiple poll choices?</label>
+        </p>
+        <a ng-click="submit()" ng-if="!linkto" class="submitButton waves-effect waves-light btn red lighten-2 red-text text-lighten-5">Create Poll</a>
+        <a ng-href="#/{{linkto}}" ng-if="linkto" class="waves-effect waves-light btn red lighten-2 red-text text-lighten-5">View Poll</a>
+        <p ng-if="linkto" style="display:inline" class="red-text text-lighten-5">Url: {{location}}</p>
+      </div>
+    </div>
+  </div>
+</div>

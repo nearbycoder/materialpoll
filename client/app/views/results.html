@@ -1,0 +1,22 @@
+ <div class="row">
+  <div class="col s12 m12 l12">
+    <div class="card blue darken-3" style="padding-bottom: 20px;">
+      <div class="card-content white-text">
+          <div class="col s12 m12 l12">
+          <p style="font-size:30px">{{title}}</p>
+        </div>
+        <div class="col s12 m12 l12" ng-repeat="option in options">
+          <p style="font-size:20px;margin:0px 5px;padding:0px 0 15px 0;">
+          <label for="test{{$index}}" style="font-size:20px" class='red-text text-lighten-5'>{{option.name}}</label>
+          <div class="progress red lighten-3" style="height:30px;">
+              <div class="determinate red lighten-1" style="width: {{option.percent}};height:30px;">
+                <p style="font-size:20px;position:absolute;left:10px;">Votes: {{option.votes}}</p>
+              </div>
+          </div>
+          </p>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+    </div>
+  </div>
+</div>

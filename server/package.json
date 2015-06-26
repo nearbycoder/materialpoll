@@ -1,0 +1,28 @@
+{
+  "name": "Material Poll Server",
+  "description": "Built with mongoose, node, express, and socketio",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nearbycoder/materialpoll",
+  "author": {
+    "name": "nearbycoder",
+    "email": "nearbycoder@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nearbycoder/materialpoll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nearbycoder/materialpoll/issues"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "mongoose": "~3.6.13",
+    "morgan": "~1.0.0",
+    "socket.io": "^1.3.5"
+  },
+  "keywords": [
+    "materialpoll"
+  ]
+}

@@ -1,0 +1,66 @@
+
+// bower:scss
+// endbower
+
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-bottom: 110px;
+  }
+
+  .footer {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    bottom: 0px;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+ /* label color */
+   .input-field label {
+     color: #e3f2fd;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #e3f2fd;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #e3f2fd;
+     box-shadow: 0 1px 0 0 #e3f2fd;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #e3f2fd;
+     box-shadow: 0 1px 0 0 #e3f2fd;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #e3f2fd;
+     box-shadow: 0 1px 0 0 #e3f2fd;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #e3f2fd;
+   }
+
+   [type="checkbox"]:checked+label:before {
+    border-right: 2px solid #e3f2fd;
+    border-bottom: 2px solid #e3f2fd;
+   }
+   .card {
+     margin-top: 20px;
+   }
+
+   .card .card-action {
+  border-top: 0px solid #e3f2fd;
+  padding-bottom: 15px;
+  padding-top: 0px;
+}
+.card .card-content {
+  padding-bottom: 0px;
+}
