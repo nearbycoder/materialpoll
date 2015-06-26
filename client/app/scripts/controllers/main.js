@@ -32,9 +32,9 @@ angular.module('materialPollApp')
     		}else {
     			addOpt = false;
     	    }
-        	if(addOpt === true){
-        		$scope.options.push({});
-        	}
+        }
+        if(addOpt === true){
+            $scope.options.push({});
         }
     };
 });
