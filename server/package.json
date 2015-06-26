@@ -1,5 +1,5 @@
 {
-  "name": "Material Poll Server",
+  "name": "materialpoll",
   "description": "Built with mongoose, node, express, and socketio",
   "version": "0.0.1",
   "homepage": "https://github.com/nearbycoder/materialpoll",
