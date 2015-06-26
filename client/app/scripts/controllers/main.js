@@ -31,10 +31,10 @@ angular.module('materialPollApp')
     			addOpt = true;
     		}else {
     			addOpt = false;
-    	}
-    	if(addOpt === true){
-    		$scope.options.push({});
-    	}
+    	    }
+        	if(addOpt === true){
+        		$scope.options.push({});
+        	}
+        }
     };
-
-  });
+});

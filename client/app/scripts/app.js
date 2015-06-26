@@ -38,4 +38,4 @@ angular
   .constant('myConfig', {
     'backend': 'http://45.55.31.147:9090/api/poll/',
     'version': 0.2
-  })
+  });

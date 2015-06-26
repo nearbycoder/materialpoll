@@ -41,5 +41,5 @@ angular.module('materialPollApp')
         }
         $scope.$apply();
       });
-    })
+    });
   });
