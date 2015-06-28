@@ -12,16 +12,22 @@ angular.module('materialPollApp')
     $scope.options = [{},{},{}];
     //submit poll
     $scope.submit = function() {
-        $('.submitButton').hide();
         var votes = [];
+        var added = false;
         for(var x = 0; x < $scope.options.length; x++){
             votes.push(0);
+            if($scope.options[x].name !== undefined && $scope.title !== undefined){
+                added = true;
+            }
         }
-        $http.post(myConfig.backend,{answers: $scope.options, name: $scope.title, multiple: $scope.multiple, votes: votes})
-        .success(function(data){
-            $scope.linkto = data[1].poll.id;
-            $scope.location = window.location.protocol + window.location.host + '/#/' + $scope.linkto;
-        });
+        if(added !== false){
+            $('.submitButton').hide();
+            $http.post(myConfig.backend,{answers: $scope.options, name: $scope.title, multiple: $scope.multiple, votes: votes})
+            .success(function(data){
+                $scope.linkto = data[1].poll.id;
+                $scope.location = window.location.protocol + window.location.host + '/#/' + $scope.linkto;
+            });
+        }
     };
     //add new poll option automatically if focused on the next to last option and other fields are filled
     $scope.addOption = function() {
