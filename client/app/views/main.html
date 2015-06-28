@@ -18,7 +18,7 @@
           <label for="test5" class='red-text text-lighten-5'>Allow multiple poll choices?</label>
         </p>
         <a ng-click="submit()" ng-if="!linkto" class="submitButton waves-effect waves-light btn red lighten-2 red-text text-lighten-5">Create Poll</a>
-        <a ng-href="#/{{linkto}}" ng-if="linkto" class="waves-effect waves-light btn red lighten-2 red-text text-lighten-5">View Poll</a>
+        <a ng-href="{{linkto}}" ng-if="linkto" class="waves-effect waves-light btn red lighten-2 red-text text-lighten-5">View Poll</a>
         <p ng-if="linkto" style="display:inline" class="red-text text-lighten-5">Url: {{location}}</p>
       </div>
     </div>
