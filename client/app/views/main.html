@@ -14,8 +14,12 @@
       </div>
       <div class="card-action" style="margin-left:25px;margin-right:25px;">
         <p>
-          <input type="checkbox" ng-model="multiple" id="test5" />
-          <label for="test5" class='red-text text-lighten-5'>Allow multiple poll choices?</label>
+          <input type="checkbox" ng-model="multiple" id="multiple" />
+          <label for="multiple" class='red-text text-lighten-5'>Allow multiple poll choices?</label>
+        </p>
+        <p>
+          <input type="checkbox" ng-model="singleIP" id="singleip" />
+          <label for="singleip" class='red-text text-lighten-5'>Restrict Votes By IP Address?</label>
         </p>
         <a ng-click="submit()" ng-if="!linkto" class="submitButton waves-effect waves-light btn red lighten-2 red-text text-lighten-5">Create Poll</a>
         <a ng-href="#/{{linkto}}" ng-if="linkto" class="waves-effect waves-light btn red lighten-2 red-text text-lighten-5">View Poll</a>

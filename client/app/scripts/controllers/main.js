@@ -22,7 +22,7 @@ angular.module('materialPollApp')
         }
         if(added !== false){
             $('.submitButton').hide();
-            $http.post(myConfig.backend,{answers: $scope.options, name: $scope.title, multiple: $scope.multiple, votes: votes})
+            $http.post(myConfig.backend,{answers: $scope.options, name: $scope.title, multiple: $scope.multiple, singleIP: $scope.singleIP, votes: votes})
             .success(function(data){
                 $scope.linkto = data[1].poll.id;
                 $scope.location = window.location.protocol + window.location.host + '/#/' + $scope.linkto;

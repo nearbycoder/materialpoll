@@ -6,7 +6,9 @@ var PollSchema   = new Schema({
 	name: String,
 	answers: Schema.Types.Mixed,
 	votes: Schema.Types.Mixed,
-	multiple: Boolean
+	multiple: Boolean,
+	singleIP: Boolean,
+	IpAddresses: Schema.Types.Mixed,
 });
 
 module.exports = mongoose.model('Poll', PollSchema);

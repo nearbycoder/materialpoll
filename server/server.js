@@ -72,7 +72,9 @@ router.route('/poll')
 		poll.id = makeid();
 		poll.name = req.body.name;  // set the poll name (comes from the request)
 		poll.multiple = req.body.multiple;
+		poll.singleIP = req.body.singleIP;
 		poll.answers = req.body.answers;
+		poll.IpAddresses = [];
 		poll.votes = req.body.votes;
 		poll.save(function(err, poll) {
 			if (err)
@@ -113,14 +115,33 @@ router.route('/poll/:poll_id')
 			if (err){
 				res.send(err);
 			}
-
-			for(x = 0; x < req.body.votes.length; x++){
-				if(req.body.votes[x] != null){
-					poll.votes[x] += req.body.votes[x];
+			if(poll.singleIP == true){
+				var ip = req.headers['x-forwarded-for'] || 
+		     req.connection.remoteAddress || 
+		     req.socket.remoteAddress ||
+		     req.connection.socket.remoteAddress;
+		     
+		     if (poll.IpAddresses.indexOf(ip) > -1) {
+				    //In the array!
+				 } else {
+				    poll.IpAddresses.push(ip);
+				    for(x = 0; x < req.body.votes.length; x++){
+							if(req.body.votes[x] != null){
+								poll.votes[x] += req.body.votes[x];
+							}
+						}
+						poll.markModified('IpAddresses');
+						poll.markModified('votes');
+				 }
+			}else{
+				for(x = 0; x < req.body.votes.length; x++){
+					if(req.body.votes[x] != null){
+						poll.votes[x] += req.body.votes[x];
+					}
 				}
+				poll.markModified('votes');
 			}
-
-			poll.markModified('votes');
+			
 			poll.save(function(err) {
 				io.emit('chat' + req.params.poll_id, poll);
 				if (err){
