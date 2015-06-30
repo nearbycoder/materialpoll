@@ -3,6 +3,19 @@
 * Server built with Node, Express, Mongo and Socket.io
 * Client built with Yo Angular.
 
+#####Notes: if deploying to server make sure to add rewrites for html5Mode or change url within app to add hash
+<pre>
+NGINX
+  server {
+    server_name my-app;
+
+    root /path/to/app;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}</pre>
+
 #### Make sure to rename config.js.example to config.js with your mongodb connection string.
 
 ##### Create Poll
