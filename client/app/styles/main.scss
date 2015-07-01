@@ -1,12 +1,15 @@
 
 // bower:scss
 // endbower
-
+  @media only screen and (max-device-width: 480px) {
+    .hide-small{
+      display:none;
+    }
+  }
  body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    padding-bottom: 110px;
   }
   .ribbon {
     background-color: #E17475;
@@ -42,7 +45,6 @@
   }
 
   .footer {
-    position: fixed;
     width: 100%;
     z-index: 100;
     bottom: 0px;
