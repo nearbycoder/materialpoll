@@ -1,7 +1,7 @@
 # Material Poll
 ### This is a open source implementation of the strawpoll.me site. [DEMO](http://materialpoll.tk)
 * Server built with Node, Express, Mongo and Socket.io
-* Client built with Yo Angular.
+* Client built with Yo Angular and materializecss
 
 #####Notes: if deploying to server make sure to add rewrites for html5Mode or change url within app to add hash
 <pre>
