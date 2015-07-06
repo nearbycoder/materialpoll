@@ -2,6 +2,21 @@
 // bower:scss
 // endbower
   @media only screen and (max-device-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    nav .brand-logo {
+      font-size: 18px;
+    }
+    #mainquestion {
+      font-size: 15px!important;
+    }
+    .questions {
+      font-size: 15px!important;
+    }
+    #mainquestionlabel {
+      font-size: 15px!important;
+    }
     .hide-small{
       display:none;
     }
