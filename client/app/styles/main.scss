@@ -1,6 +1,47 @@
 
 // bower:scss
 // endbower
+  #mainquestion {
+    font-size: 30px;
+  }
+  #mainq {
+    font-size:20px;
+  }
+  .mainoptions {
+    font-size:20px;
+    margin:0 5px;
+    padding:0 0 15px 0;
+  }
+  .card {
+    padding-bottom: 20px;
+  }
+  .progress {
+    height:30px;
+  }
+  .determinate {
+    height:30px;
+  }
+  .question {
+    font-size:20px;
+    position:absolute;
+    left:10px;
+    z-index:100;
+    width: 100px;
+  }
+  #mainquestionlabel {
+    font-size: 20px;
+  }
+  .card-action {
+    margin-left:25px;
+    margin-right:25px;
+  }
+  .questions {
+    font-size:20px;
+    margin:10px;
+  }
+  #pieChart {
+    padding: 20px;
+  }
   @media only screen and (max-device-width: 480px) {
     body {
       font-size: 14px;

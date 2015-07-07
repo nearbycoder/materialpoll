@@ -3,17 +3,17 @@
     <div class="card blue darken-3">
       <div class="card-content white-text">
           <div class="col s12 m12 l12">
-          <p style="font-size:30px" id="mainquestion">{{title}}</p>
+          <p id="mainquestion">{{title}}</p>
         </div>
         <div class="col s12 m12 l12" ng-repeat="option in options">
           <p>
           <input ng-model="option.checked" ng-click="updateSelection($index, options)" type="checkbox" id="test{{$index}}" />
-          <label for="test{{$index}}" style="font-size:20px;margin:10px" class='red-text text-lighten-5 questions'>{{option.name}}</label>
+          <label for="test{{$index}}" class='red-text text-lighten-5 questions'>{{option.name}}</label>
           </p>
         </div>
         <div style="clear:both"></div>
       </div>
-      <div class="card-action" style="margin-left:25px;margin-right:25px;">
+      <div class="card-action">
         <a ng-click="vote(options)" class="waves-effect waves-light btn red lighten-2 red-text text-lighten-5">Submit Vote</a>
       </div>
     </div>

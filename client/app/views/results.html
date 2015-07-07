@@ -1,24 +1,24 @@
  <div class="row">
   <div class="col s12 m12 l12">
-    <div class="card blue darken-3" style="padding-bottom: 20px;">
+    <div class="card blue darken-3">
       <div class="card-content white-text">
         <div class="col s12 m12 l12">
-          <p style="font-size:30px" id="mainquestion">{{title}}</p>
+          <p id="mainquestion">{{title}}</p>
         </div>
         <div class="col s6 m6 l6">
           <div class="col s12 m12 l12" ng-repeat="option in options">
-            <p style="font-size:20px;margin:0px 5px;padding:0px 0 15px 0;">
-            <label for="test{{$index}}" style="font-size:20px" class='red-text text-lighten-5 questions'>{{option.name}}</label>
-            <div class="progress" style="height:30px;background-color:{{option.highlight}}">
-                <div class="determinate" style="background-color:{{option.color}} ;width: {{option.percent}};height:30px;">
-                  <p class="questions" style="font-size:20px;position:absolute;left:10px;z-index:100;width: 100px">Votes: {{option.votes}}</p>
+            <p class="mainoptions">
+            <label for="test{{$index}}" class='red-text text-lighten-5 questions'>{{option.name}}</label>
+            <div class="progress" style="background-color:{{option.highlight}}">
+                <div class="determinate" style="background-color:{{option.color}} ;width: {{option.percent}};">
+                  <p class="question">Votes: {{option.votes}}</p>
                 </div>
             </div>
             </p>
           </div>
         </div>
         <div class="col s6 m6 l6">
-          <canvas id="pieChart" width="100" height="100" style="padding: 20px;"></canvas>
+          <canvas id="pieChart" width="100" height="100"></canvas>
         </div>
         <div style="clear:both"></div>
       </div>

@@ -3,8 +3,8 @@
     <div class="card blue darken-3">
       <div class="card-content white-text">
           <div class="input-field col s12 m12 l12">
-          <input id="mainquestion" ng-model="title" type="text" class="validate" style="font-size:20px">
-          <label for="mainquestion" id="mainquestionlabel" style="font-size:20px">Type your questions or options here</label>
+          <input id="mainq" ng-model="title" type="text" class="validate">
+          <label for="mainq" id="mainquestionlabel">Type your questions or options here</label>
         </div>
         <div class="input-field col s12 m12 l12" ng-repeat="option in options">
           <input id="option1" ng-model="option.name" ng-focus="addOption()" type="text" class="validate">
@@ -12,7 +12,7 @@
         </div>
         <div style="clear:both"></div>
       </div>
-      <div class="card-action" style="margin-left:25px;margin-right:25px;">
+      <div class="card-action">
         <p>
           <input type="checkbox" ng-model="multiple" id="multiple" />
           <label for="multiple" class='red-text text-lighten-5'>Allow multiple poll choices?</label>
